@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09090a;
+  color: white;
+  height: 100vh;
+}
+
+header {
+  display: flex; /*Disposição dos elementos dentro de uma caixa, colocando ao lado*/
+  align-items: center; /*Alinha ao centro*/
+  justify-content: space-between; /*justificar igual o word, mas com espaço-entre*/
+
+  padding: 48px;
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px; /*preenche 16px em cima e baixo, 24px nas laterais*/
+  border-radius: 8px; /*arredondamento da borda*/
+  border: 1px solid #8b56f6; /*há a borda solida e dashed, que fica com pontinhos*/
+  background-color: transparent; /*cor de fundo transparente*/
+  color: white; /*cor do texto branca*/
+
+  display: flex;
+  align-items: center;
+  gap: 12px; /*espaço entre os elementos quando display: flex*/
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px; /*182 em cima, 48 laterais e 48 em baixo*/
+  width: fit-content;
+}
+
+.habits {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex; /*flex fica um ao lado do outro*/
+  flex-direction: column; /*mudando a direção do flex para colunas*/
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+  color: #a1a1aa;
+
+  text-align: center;
+}
+
+input {
+  appearance: none; /*Obrigatório para aplicar o estilo no checkbox*/
+  -webkit-appearance: none; /*prefixo para alguns navegadores entenderem. Não entendem só o primeiro*/
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background: #1e1e1e;
+}
+
+/*Pseudo-selector*/
+input:checked {
+  background: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
